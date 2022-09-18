@@ -7,6 +7,7 @@ def main():
     rest_bmr = calculate_bmr(gender, weight, height, age) 
     total_calculation(rest_bmr)
 
+
 def welcome():
     print("Welcome to your calories python calculator!\nFind out How many calories should you eat daily.\n")
 
@@ -108,7 +109,6 @@ def get_moderate_activity(rest_bmr):
 def get_very_active(rest_bmr):
     active = rest_bmr * 1.725
     return active
-
 
 if __name__ == '__main__':
     main()
