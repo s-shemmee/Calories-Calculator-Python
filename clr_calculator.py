@@ -8,7 +8,7 @@ def main():
     total_calculation(bmr)
 
 def welcome():
-    print("Calculate your BMR!\nFind out How many calories should you eat daily.\n")
+    print("Welcome to your calories python calculator!\nFind out How many calories should you eat daily.\n")
 
 
 def sex():    
