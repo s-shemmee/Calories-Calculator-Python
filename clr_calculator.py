@@ -4,8 +4,8 @@ def main():
     weight = get_weight()
     height = get_height()
     age = get_age()
-    bmr = calculate_bmr(gender, weight, height, age) 
-    total_calculation(bmr)
+    rest_bmr = calculate_bmr(gender, weight, height, age) 
+    total_calculation(rest_bmr)
 
 def welcome():
     print("Welcome to your calories python calculator!\nFind out How many calories should you eat daily.\n")
@@ -57,14 +57,14 @@ def calculate_bmr(gender, weight, height, age):
 
 
 
-def total_calculation(bmr):
+def total_calculation(rest_bmr):
     user_activity_lvl = get_user_activity()    
 
     maintain = {
-      "sedentary" : get_sedentary(bmr), 
-      "light" : get_light_activity(bmr), 
-      "moderate" : get_moderate_activity(bmr), 
-      "active" : get_very_active(bmr)
+      "sedentary" : get_sedentary(rest_bmr), 
+      "light" : get_light_activity(rest_bmr), 
+      "moderate" : get_moderate_activity(rest_bmr), 
+      "active" : get_very_active(rest_bmr)
       }
 
     if user_activity_lvl == "sedentary":
@@ -93,20 +93,20 @@ def get_user_activity():
             break
 
 
-def get_sedentary(bmr):
-    sedentary = bmr * 1.25
+def get_sedentary(rest_bmr):
+    sedentary = rest_bmr * 1.25
     return sedentary
 
-def get_light_activity(bmr):
-    light = bmr * 1.375
+def get_light_activity(rest_bmr):
+    light = rest_bmr * 1.375
     return light
 
-def get_moderate_activity(bmr):
-    moderate = bmr * 1.550
+def get_moderate_activity(rest_bmr):
+    moderate = rest_bmr * 1.550
     return moderate
 
-def get_very_active(bmr):
-    active = bmr * 1.725
+def get_very_active(rest_bmr):
+    active = rest_bmr * 1.725
     return active
 
 
