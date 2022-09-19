@@ -1,4 +1,4 @@
-# Calories python Calculator
+# Calories Python Calculator
 
 ##  Mifflin St. Guyer's equation
 
